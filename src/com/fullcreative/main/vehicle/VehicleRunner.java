@@ -4,10 +4,6 @@ public class VehicleRunner {
 
 	private Vehicle vehicle;
 
-	public VehicleRunner(Vehicle vehicle) {
-		this.vehicle = vehicle;
-	}
-
 	public void vehicleWork() {
 
 		System.out.println(getVehicle().start());
@@ -18,6 +14,10 @@ public class VehicleRunner {
 
 	public Vehicle getVehicle() {
 		return vehicle;
+	}
+
+	public void setVehicle(Vehicle vehicle) {
+		this.vehicle = vehicle;
 	}
 
 }
