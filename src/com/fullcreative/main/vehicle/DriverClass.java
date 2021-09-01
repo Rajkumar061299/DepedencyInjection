@@ -6,7 +6,9 @@ public class DriverClass {
 		
 		Truck tata = new Truck();
 
-		VehicleRunner runner = new VehicleRunner(tata);
+		VehicleRunner runner = new VehicleRunner();
+		
+		runner.instance(tata);
 
 		runner.vehicleWork();
 	}

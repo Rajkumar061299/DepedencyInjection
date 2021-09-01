@@ -11,26 +11,26 @@ import com.fullcreative.main.vehicle.VehicleRunner;
 
 class VehicleRunnerTest {
 
-	VehicleRunner runner;
+	VehicleRunner runner = new VehicleRunner();
 
 	@Test
 	void testWithTruck() {
 		Truck tata = new Truck();
-		runner = new VehicleRunner(tata);
+		runner.instance(tata);
 		Vehicle vehicle = runner.getVehicle();
 		assertEquals("starting truck engine...", vehicle.start());
-		assertEquals("stopping truck engine...",vehicle.stop());
+		assertEquals("stopping truck engine...", vehicle.stop());
 
 	}
-	
+
 	@Test
 	void testWithCar() {
 		Car tesla = new Car();
-		runner = new VehicleRunner(tesla);
+		runner.instance(tesla);
 		Vehicle vehicle = runner.getVehicle();
 		assertEquals("starting car engine...", vehicle.start());
-		assertEquals("stopping car engine...",vehicle.stop());
+		assertEquals("stopping car engine...", vehicle.stop());
 
 	}
-	
+
 }
